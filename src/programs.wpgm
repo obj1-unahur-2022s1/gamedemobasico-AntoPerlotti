@@ -1,0 +1,17 @@
+import wollok.game.*
+import personajes.*
+
+program abc {
+	game.width(8)
+	game.height(12)
+	game.title("Juego")
+	game.addVisual(mario)
+	
+	keyboard.x().onPressDo({
+		game.removeVisual(mario)
+		tomaco.position(game.at(3,4))
+		game.addVisual(tomaco)
+	})
+	game.start()
+
+}
